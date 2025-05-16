@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soporte Técnico - [Nombre de tu Call Center]</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <header>
+        <h1>Call Center Soporte Máquinas</h1>
+        <nav>
+            <a href="#buscador">Buscador de Alarmas</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Buscador de Alarmas -->
+    <section id="buscador">
+        <h2>Ingresa el código de alarma</h2>
+        <input type="text" id="codigoAlarma" placeholder="Ej: A001">
+        <button onclick="buscarAlarma()">Buscar</button>
+        <div id="resultado"></div>
+    </section>
+
+    <!-- Zona de Contacto -->
+    <section id="contacto">
+        <h2>¿No encontraste solución?</h2>
+        <button onclick="window.location.href='tel:+123456789'">Llamar ahora</button>
+        <button onclick="window.open('https://wa.me/123456789')">WhatsApp</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
