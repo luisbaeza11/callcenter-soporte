@@ -5,15 +5,7 @@ const alarmas = {
         "causa": "Voltaje irregular o fallo en el sensor",
         "solucion": "1. Apague la máquina. 2. Verifique el cableado. 3. Reinicie.",
         "urgencia": "Alta"
-    }
-
-    "A002": {
-        "descripcion": "Hongo de emergencia activo",
-        "causa": "El hongo de emergencia fue oprimido en el panel operador",
-        "solucion": "1. Gire el hongo de emergencia para desenclavarlo. 2. Jale hacia arriba.",
-        "urgencia": "Alta"
-    }
-    },
+     },
 
     "B205": {
         "descripcion": "Fuga de refrigerante",
