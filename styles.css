@@ -36,3 +36,33 @@ button {
     background-color: white;
     text-align: left;
 }
+
+/* Estilos para login */
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.login-container input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+}
+
+/* Estilos para panel admin */
+.user-management {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+#userForm input, #userForm select {
+    margin: 5px 0;
+    padding: 8px;
+    width: 100%;
+}
