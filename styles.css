@@ -67,3 +67,41 @@ button {
     padding: 8px;
     width: 100%;
 }
+
+
+/* Estilos para el header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem;
+}
+
+/* Contenedor del botón */
+.login-btn-container {
+    margin-left: auto; /* Empuja el botón a la derecha */
+}
+
+/* Estilo del botón */
+.login-btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: bold;
+}
+
+.login-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Ícono */
+.login-icon {
+    font-size: 16px;
+}
