@@ -6,12 +6,26 @@ body {
     background-color: #f5f5f5;
 }
 
-header {
+/*header {
     background-color: 006bad;
     color: white;
     padding: 1rem;
     text-align: center;
+}*/
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #006BAD; /* Nuevo color azul */
+    color: white;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Opcional: sombra sutil */
 }
+
+
+
 
 #buscador {
     text-align: center;
