@@ -118,3 +118,14 @@ header {
     font-weight: 500;
 }
 
+    .login-btn i {
+    font-size: 18px; /* Tamaño del ícono */
+    color: #0071e3; /* Azul Apple */
+    margin-right: 8px; /* Espaciado entre ícono y texto */
+}
+
+/* Efecto hover */
+.login-btn:hover i {
+    color: #004a9e; /* Azul más oscuro al pasar el mouse */
+}
+
