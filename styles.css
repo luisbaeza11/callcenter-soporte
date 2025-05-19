@@ -1,35 +1,132 @@
 
 
-
-/* Estilos generales */
+/* ============== */
+/* ESTILOS GENERALES */
+/* ============== */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: #f8f9fa;
+    line-height: 1.6;
+    color: #333;
 }
 
-/* Header unificado y mejorado */
+/* ============== */
+/* HEADER PROFESIONAL */
+/* ============== */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #006BAD;
     color: white;
-    padding: 1rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1000;
 }
 
-/* Buscador */
+/* ============== */
+/* NAVEGACIÓN MEJORADA */
+/* ============== */
+.header-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.header-nav a {
+    color: #212529;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    font-weight: 600;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto hover profesional */
+.header-nav a:hover {
+    color: white !important;
+    background-color: #005a9c;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    border-color: transparent;
+}
+
+/* Efecto "active" */
+.header-nav a.active {
+    background-color: #004a80;
+    color: white !important;
+}
+
+/* Efecto de onda al hacer clic */
+.header-nav a:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+.header-nav a:focus:not(:active)::after {
+    animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(20, 20);
+        opacity: 0;
+    }
+}
+
+/* ============== */
+/* BUSCADOR MEJORADO */
+/* ============== */
 #buscador {
     text-align: center;
-    padding: 2rem;
+    padding: 2.5rem 1rem;
+    background: white;
+    border-radius: 10px;
+    margin: 2rem auto;
+    max-width: 800px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-#buscador input,
-#buscador button {
-    padding: 0.5rem;
+#buscador input {
+    padding: 0.75rem 1rem;
     margin: 0.5rem;
+    border: 2px solid #e9ecef;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 60%;
+    max-width: 400px;
+    transition: border-color 0.3s;
+}
+
+#buscador input:focus {
+    border-color: #006BAD;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 107, 173, 0.2);
 }
 
 #buscador button {
@@ -37,115 +134,80 @@ header {
     color: white;
     border: none;
     cursor: pointer;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s;
 }
 
-#resultado {
-    margin-top: 1rem;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    background-color: white;
-    text-align: left;
+#buscador button:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Login */
-.login-container {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.login-container input {
-    display: block;
-    width: 100%;
-    margin: 10px 0;
-    padding: 8px;
-}
-
-/* Panel Admin */
-.user-management {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-}
-
-#userForm input,
-#userForm select {
-    margin: 5px 0;
-    padding: 8px;
-    width: 100%;
-}
-
-/* Estilos para el botón de login */
+/* ============== */
+/* BOTÓN LOGIN PROFESIONAL */
+/* ============== */
 .login-btn-container {
     margin-left: auto;
 }
 
 .login-btn {
-    background-color: transparent;
-    color: #0071e3;
-    padding: 8px 12px;
-    border-radius: 18px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
     text-decoration: none;
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 0.75rem;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    border: 1px solid #d2d2d7;
-    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    font-weight: 500;
+    backdrop-filter: blur(5px);
 }
 
 .login-btn:hover {
-    background-color: #f5f5f7;
-    border-color: #0071e3;
-}
-
-.login-icon {
-    font-size: 17px;
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-}
-
-.login-text {
-    font-size: 14px;
-    font-weight: 500;
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
 .login-btn i {
-    font-size: 18px;
-    color: #0071e3;
-    margin-right: 8px;
+    font-size: 1.2rem;
+    transition: transform 0.3s;
 }
 
 .login-btn:hover i {
-    color: #004a9e;
+    transform: scale(1.1);
 }
 
-
-
-
-
-/* Enlaces de navegación - Versión modificada */
-.header-nav a {
-    color: black;                   /* Texto en negro */
-    text-decoration: none;          /* Sin subrayado */
-    margin: 0 15px;                 /* Espaciado horizontal */
-    font-size: 1.1rem;              /* Tamaño de fuente */
-    padding: 5px 10px;              /* Espaciado interno */
-    border-radius: 4px;             /* Esquinas redondeadas */
-    transition: all 0.3s ease;      /* Transición suave */
-    font-weight: bold;              /* Negrita */
-    display: inline-block;          /* Mejor control del espacio */
+/* ============== */
+/* EFECTOS RESPONSIVE */
+/* ============== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .header-nav {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1rem;
+    }
+    
+    .header-nav a {
+        width: 100%;
+        text-align: center;
+        margin: 0.25rem 0;
+    }
+    
+    .login-btn-container {
+        margin: 1rem auto 0;
+    }
 }
-
-/* Efecto hover */
-.header-nav a:hover {
-    color: white !important;        /* Texto blanco al pasar mouse */
-    background-color: #006BAD;      /* Fondo azul corporativo */
-    transform: translateY(-2px);    /* Efecto de elevación sutil */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra ligera */
-}
-
