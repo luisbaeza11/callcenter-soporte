@@ -123,3 +123,29 @@ header {
 .login-btn:hover i {
     color: #004a9e;
 }
+
+
+
+
+
+/* Enlaces de navegación - Versión modificada */
+.header-nav a {
+    color: black;                   /* Texto en negro */
+    text-decoration: none;          /* Sin subrayado */
+    margin: 0 15px;                 /* Espaciado horizontal */
+    font-size: 1.1rem;              /* Tamaño de fuente */
+    padding: 5px 10px;              /* Espaciado interno */
+    border-radius: 4px;             /* Esquinas redondeadas */
+    transition: all 0.3s ease;      /* Transición suave */
+    font-weight: bold;              /* Negrita */
+    display: inline-block;          /* Mejor control del espacio */
+}
+
+/* Efecto hover */
+.header-nav a:hover {
+    color: white !important;        /* Texto blanco al pasar mouse */
+    background-color: #006BAD;      /* Fondo azul corporativo */
+    transform: translateY(-2px);    /* Efecto de elevación sutil */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra ligera */
+}
+
