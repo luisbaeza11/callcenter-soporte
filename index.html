@@ -1,114 +1,75 @@
-<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soporte Técnico - Buscar Alarmas</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-        
-        .search-container {
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        
-        h1 {
-            color: #333;
-            margin-bottom: 25px;
-            font-size: 24px;
-        }
-        
-        .search-box {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-        
-        input[type="text"] {
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            width: 200px;
-            font-size: 16px;
-        }
-        
-        button {
-            padding: 12px 20px;
-            background-color: #2c3e50;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s;
-        }
-        
-        button:hover {
-            background-color: #34495e;
-        }
-        
-        .example {
-            color: #777;
-            font-style: italic;
-            margin-bottom: 20px;
-        }
-        
-        #resultado {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #f9f9f9;
-            border-radius: 4px;
-            border-left: 4px solid #3498db;
-            text-align: left;
-        }
-    </style>
+    <title>Soporte Técnico - [Nombre de tu Call Center]</title>
+   
+<!-- Enlace al archivo CSS (¡importante!) -->
+    <link rel="stylesheet" href="styles.css">
+    
 </head>
+
+    
 <body>
-    <div class="search-container">
-        <h1>Ingresa el código de alarma</h1>
+    <!-- Barra de navegación -->
+    <header>
         
-        <div class="example">Ej: A001</div>
-        
-        <div class="search-box">
-            <input type="text" id="codigoAlarma" placeholder="Código de alarma">
-            <button onclick="buscarAlarma()">Buscar</button>
-        </div>
-        
-        <div id="resultado"></div>
+
+    <!-- Título centrado -->
+    <div class="header-title">
+        <h1>Servicio Técnico Máquinas</h1>
     </div>
 
-    <script>
-        function buscarAlarma() {
-            const codigo = document.getElementById('codigoAlarma').value;
-            const resultado = document.getElementById('resultado');
+    <!-- Menú de navegación debajo -->
+    <nav class="header-nav">
+        <a href="#buscador">Buscar Maquina</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+
+
+
+
+        
+
+
+        
+  <!-- Botón Login (derecha) -->
+ 
+        <div class="fad fa-user-circle">
+        <a href="login.html" class="login-btn">
+            <span class="fa-thin fa-arrow-left-to-bracket">🔑</span> Login
+
             
-            // Limpiar resultados anteriores
-            resultado.innerHTML = '';
-            
-            // Simulación de búsqueda (deberías reemplazar esto con tu lógica real)
-            if (codigo === 'A001') {
-                resultado.innerHTML = `
-                    <h3>Alarma A001 - Sobrecalentamiento</h3>
-                    <p><strong>Solución:</strong> Verificar sistema de refrigeración y limpiar filtros.</p>
-                    <p><strong>Prioridad:</strong> Alta</p>
-                `;
-            } else if (codigo === '') {
-                resultado.innerHTML = '<p>Por favor ingrese un código de alarma</p>';
-            } else {
-                resultado.innerHTML = '<p>No se encontró información para esta alarma.</p>';
-            }
-        }
-    </script>
+        </a>
+    </div>
+  
+    
+    </header>
+
+
+
+ 
+    <!-- Buscador de Alarmas -->
+    <section id="buscador">
+        <h2>Ingresa el código de alarma</h2>
+        <input type="text" id="codigoAlarma" placeholder="Ej: A001">
+        <button onclick="buscarAlarma()">Buscar</button>
+        <div id="resultado"></div>
+    </section>
+
+    <!-- Zona de Contacto -->
+    <section id="contacto">
+        <h2>¿No encontraste solución?</h2>
+        <button onclick="window.location.href='tel:+123456789'">Llamar ahora</button>
+        <button onclick="window.open('https://wa.me/123456789')">WhatsApp</button>
+        <!-- Ejemplo básico del botón -->
+        <button id="addUserBtn" class="btn-admin">➕ Agregar Usuario</button>
+    </section>
+
+   
+
+    
+    <script src="script.js"></script>
 </body>
 </html>
