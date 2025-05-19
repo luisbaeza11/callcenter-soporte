@@ -37,3 +37,33 @@ function buscarAlarma() {
         resultadoDiv.innerHTML = "<p>❌ Código no encontrado. Verifique o contacte a soporte.</p>";
     }
 }
+
+
+function buscarMaquina() {
+    const codigo = document.getElementById('codigoMaquina').value;
+    const resultado = document.getElementById('resultado-maquina');
+    
+    // Limpiar resultados anteriores
+    resultado.innerHTML = '';
+    
+    // Simulación de búsqueda (deberías reemplazar esto con tu lógica real)
+    if (codigo === 'M001') {
+        resultado.innerHTML = `
+            <div class="machine-result">
+                <h3>M001 - Máquina de Inyección</h3>
+                <div class="machine-details">
+                    <div class="machine-detail">
+                        <p><strong>Ubicación:</strong> Planta 1, Línea A</p>
+                        <p><strong>Estado:</strong> <span style="color:green">Operativa</span></p>
+                    </div>
+                    <div class="machine-detail">
+                        <p><strong>Último mantenimiento:</strong> 15/05/2023</p>
+                        <p><strong>Próximo mantenimiento:</strong> 15/06/2023</p>
+                    </div>
+                </div>
+            </div>
+        `;
+    } else {
+        resultado.innerHTML = '<p>No se encontró ninguna máquina con ese código.</p>';
+    }
+}
