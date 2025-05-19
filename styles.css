@@ -1,122 +1,125 @@
+
+
+
 /* Estilos generales */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    color: #333;
 }
 
-/* Contenedor principal */
-.alarm-search-container {
+/* Contenedor de búsqueda */
+.search-container {
     background-color: white;
     padding: 2.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 500px;
     text-align: center;
+    margin: 20px;
 }
 
 /* Título */
-.alarm-search-container h1 {
+.search-container h1 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
     font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom: 1.5rem;
-    color: #2c3e50;
 }
 
 /* Ejemplo */
-.alarm-example {
-    display: block;
-    margin-bottom: 1.8rem;
+.example {
     color: #7f8c8d;
+    font-style: italic;
+    margin-bottom: 1.8rem;
+    display: block;
     font-size: 0.95rem;
 }
 
-/* Grupo de búsqueda */
-.search-group {
+/* Caja de búsqueda */
+.search-box {
     display: flex;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 10px;
     margin-bottom: 1.5rem;
 }
 
 /* Campo de entrada */
-#codigoAlarma {
-    padding: 0.75rem 1rem;
+.search-box input[type="text"] {
+    padding: 0.8rem 1rem;
     border: 1px solid #ddd;
     border-radius: 6px;
-    font-size: 1rem;
     width: 180px;
+    font-size: 1rem;
     transition: border-color 0.3s;
 }
 
-#codigoAlarma:focus {
+.search-box input[type="text"]:focus {
     outline: none;
     border-color: #3498db;
 }
 
 /* Botón de búsqueda */
-.search-button {
-    padding: 0.75rem 1.5rem;
-    background-color: #3498db;
+.search-box button {
+    padding: 0.8rem 1.5rem;
+    background-color: #2c3e50;
     color: white;
     border: none;
     border-radius: 6px;
     font-size: 1rem;
-    font-weight: 500;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
 }
 
-.search-button:hover {
-    background-color: #2980b9;
+.search-box button:hover {
+    background-color: #34495e;
+    transform: translateY(-2px);
 }
 
 /* Resultados */
 #resultado {
     margin-top: 1.5rem;
-    padding: 1rem;
-    background-color: #f8f9fa;
+    padding: 1.2rem;
+    background-color: #f9f9f9;
     border-radius: 6px;
+    border-left: 4px solid #3498db;
     text-align: left;
-    min-height: 50px;
 }
 
-/* Estilos para los resultados de alarma */
-.alarm-result {
-    padding: 0.5rem 0;
-}
-
-.alarm-result h3 {
+#resultado h3 {
     color: #2c3e50;
     margin-top: 0;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
 }
 
-.alarm-result p {
-    margin: 0.3rem 0;
+#resultado p {
+    margin: 0.5rem 0;
     color: #34495e;
 }
 
-/* Responsive para móviles */
+#resultado strong {
+    color: #2c3e50;
+}
+
+/* Responsive */
 @media (max-width: 480px) {
-    .alarm-search-container {
-        padding: 1.5rem;
-        margin: 1rem;
+    .search-container {
+        padding: 1.8rem;
     }
     
-    .search-group {
+    .search-box {
         flex-direction: column;
         align-items: center;
     }
     
-    #codigoAlarma, .search-button {
+    .search-box input[type="text"],
+    .search-box button {
         width: 100%;
         max-width: 250px;
     }
