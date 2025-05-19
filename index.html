@@ -52,7 +52,17 @@
         <button id="addUserBtn" class="btn-admin">➕ Agregar Usuario</button>
     </section>
 
-   
+   <!-- Buscador de Máquinas -->
+    <section id="buscador-maquinas">
+        <h2>Buscar Máquina</h2>
+        <div class="search-container">
+            <input type="text" id="codigoMaquina" placeholder="Ej: M001">
+        <button onclick="buscarMaquina()">
+            <i class="fas fa-search"></i> Buscar
+        </button>
+    </div>
+    <div id="resultado-maquina" class="result-container"></div>
+    </section>
 
     
     <script src="script.js"></script>
