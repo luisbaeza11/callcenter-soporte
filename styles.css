@@ -21,6 +21,12 @@ header {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+.header-title {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
 /* Para pantallas grandes texto servicio soporte tecnico maquinas */
 .header-title h1 {
     margin: 0;
