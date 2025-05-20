@@ -1,59 +1,75 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soporte Técnico - [Nombre de tu Call Center]</title>
-   
-<!-- Enlace al archivo CSS (¡importante!) -->
+    <title>Soporte Técnico - Servicio Máquinas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    
 </head>
 
-    
 <body>
-   
-    
-<header>
-    <div class="header-content">
-        <div class="header-title">
-            <h1>Servicio Técnico Máquinas</h1>
+    <!-- Cabecera -->
+    <header>
+        <div class="header-content">
+            <div class="header-title">
+                <h1>Servicio Técnico Máquinas</h1>
+            </div>
+            
+            <nav class="header-nav">
+                <a href="#buscador"><i class="fas fa-search"></i> Buscar Máquina</a>
+                <a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a>
+            </nav>
+            
+            <div class="login-container">
+                <a href="login.html" class="login-btn">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                </a>
+            </div>
         </div>
-        
-        <nav class="header-nav">
-            <a href="#buscador">Buscar Maquina</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
-        
-        <div class="login-container">
-            <a href="login.html" class="login-btn">
-                <span class="fa-thin fa-arrow-left-to-bracket">🔑</span> Login
-            </a>
-        </div>
-    </div>
-</header>
+    </header>
 
+    <!-- Contenido principal -->
+    <main>
+        <!-- Buscador de Alarmas -->
+        <section id="buscador" class="search-section">
+            <div class="search-container">
+                <h2><i class="fas fa-bell"></i> Ingresa el código de alarma</h2>
+                <p class="search-example">Ej: A001</p>
+                
+                <div class="search-box">
+                    <input type="text" id="codigoAlarma" placeholder="Ej: A001" aria-label="Código de alarma">
+                    <button onclick="buscarAlarma()" class="search-btn">
+                        <i class="fas fa-search"></i> Buscar
+                    </button>
+                </div>
+                
+                <div id="resultado" class="result-container"></div>
+            </div>
+        </section>
 
- 
-    <!-- Buscador de Alarmas -->
-    <section id="buscador">
-        <h2>Ingresa el código de alarma</h2>
-        <input type="text" id="codigoAlarma" placeholder="Ej: A001">
-        <button onclick="buscarAlarma()">Buscar</button>
-        <div id="resultado"></div>
-    </section>
+        <!-- Zona de Contacto -->
+        <section id="contacto" class="contact-section">
+            <div class="contact-container">
+                <h2><i class="fas fa-question-circle"></i> ¿No encontraste solución?</h2>
+                
+                <div class="contact-buttons">
+                    <button onclick="window.location.href='tel:+123456789'" class="contact-btn call-btn">
+                        <i class="fas fa-phone"></i> Llamar ahora
+                    </button>
+                    
+                    <button onclick="window.open('https://wa.me/123456789')" class="contact-btn whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </button>
+                    
+                    <button id="addUserBtn" class="contact-btn admin-btn">
+                        <i class="fas fa-user-plus"></i> Agregar Usuario
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <!-- Zona de Contacto -->
-    <section id="contacto">
-        <h2>¿No encontraste solución?</h2>
-        <button onclick="window.location.href='tel:+123456789'">Llamar ahora</button>
-        <button onclick="window.open('https://wa.me/123456789')">WhatsApp</button>
-        <!-- Ejemplo básico del botón -->
-        <button id="addUserBtn" class="btn-admin">➕ Agregar Usuario</button>
-    </section>
-
-   
-
-    
     <script src="script.js"></script>
 </body>
 </html>
